@@ -1,0 +1,16 @@
+# Gerard Hanlon, 2018.02.24
+# A palindrome reads the same both ways. The lagest 
+# palindrome made from the product of two 2-digit 
+# numbers is 9009=91*99
+# This finds the palindrome made from the product of 
+# two 3 digit numbers
+
+n = 0
+for a in range(999, 100, - 1):
+    for b in range(a, 100, -1):
+        x = a*b
+        if x > n:
+            s = str(a*b)
+            if s == s[::-1]:
+                n = a*b
+print(n)
